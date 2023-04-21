@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --nav-bar-color: #1c2536;
+  --nav-text-color: #fff;
+  --nav-bar-hover-color: #2a3652;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  font-size: 0.9rem;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.left-container {
+  width: 30%;
+}
+
+.right-container {
+  width: 70%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--nav-bar-color);
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+}
+
+nav header {
+  color: var(--nav-text-color);
+  background-color: var(--nav-bar-color);
+  width: 100%;
+  padding: 1em;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--nav-text-color);
+  padding: 1em;
+  border-top: 0.1em solid rgba(255, 255, 255, 0.4);
+  font-weight: 300;
+  display: block;
+}
+
+nav a:hover {
+  background-color: var(--nav-bar-hover-color);
+}
+
+nav a:visited {
+  color: var(--nav-text-color);
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2em 4em;
+  gap: 1em;
+}
+
+section header {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+section p {
+  margin: 1em;
+  text-align: justify;
+}
+
+section li {
+  margin: 1em 1em 1em 3em;
+  text-align: justify;
+}
+
+section code {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 1em;
+  padding: 1em;
+  line-height: 1.75em;
+  background-color: lightgrey;
+}
+
+.second-level li {
+  margin-left: 4em;
+}
+
+.right-container a,
+.right-conatiner a:visited {
+  color: var(--nav-bar-color);
+}
+
+.right-container a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 750px) {
+  main {
+    flex-direction: column;
+  }
+  nav {
+    position: static;
+    flex-direction: row;
+  }
+  .left-container,
+  .right-container {
+    width: 100%;
+  }
+}
